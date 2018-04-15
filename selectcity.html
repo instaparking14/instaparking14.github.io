@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+
+}
+
+/*.dropdown-content a {*/
+/*    color: black;*/
+/*    padding: 12px 16px;*/
+/*    left: 50px;*/
+    /*right: auto;*/
+/*    text-align: center;*/
+/*    transform: translate(50%, 0);*/
+/*    display: block;*/
+/*    text-decoration: none;*/
+/*}*/
+
+.dropdown a:hover {background-color: #ddd}
+
+.show {display:block;}
+</style>
+</head>
+<style>
+#section1{
+    background-color:black;
+    height:10%;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+
+}
+p.italic{
+    font-style:italic;
+    font-size:15px;
+    margin-left:40px;
+    line-height:0px;
+    
+
+}
+
+body, html {
+    height: 100%;
+}
+
+/*.bg { */
+    /* The image used */
+/*    background-image: url("http://hd.wallpaperswide.com/thumbs/where_chilly_winds_blow-t2.jpg");*/
+
+    /* Full height */
+/*    height: 100%; */
+
+    /* Center and scale the image nicely */
+/*    background-position: center;*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: stretch;*/
+/*}*/
+p.img{
+    height:1100px;
+    width:800px;
+}
+
+</style>
+<body background = "http://hd.wallpaperswide.com/thumbs/where_chilly_winds_blow-t2.jpg" background-repeat=no-repeat background-size = stretch>
+<!--background-image: url(‘../backgroundImg/where_chilly_winds_blow-wallpaper-aVMEQR0.jpg’);-->
+<section id="section1">
+
+    <h1 style="color:white;margin-bottom:0;">InstaPark
+
+    <br>
+
+       <p class="italic" style="margin-top:0;">A smart parking solution</p>
+       </h1>
+</section>
+<br><br><br><br>
+
+<p>Please select your city.</p>
+
+<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">Choose City</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="https://crimson-sripriya94.c9users.io/hackathon/huntsville_selectplace.html">Huntsville</a>
+    <a href="#Tuscaloosa">Tuscaloosa</a>
+    <a href="#Nashville">Nashville</a>
+    <a href="#Birmingham">Birmingham</a>
+	<a href="#Montgomery">Montgomery</a>
+  </div>
+</div>
+<br><br><br><br>
+
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+		
+      }
+    }
+}
+}
+
+</script>
+<!--</div>-->
+</body>
+</html>

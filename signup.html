@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Page Title</title>
+<script src="js/onsubmit_event.js"></script>
+</head>
+<style>
+#section1{
+    background-color:black;
+    height:10%;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+
+}
+p.italic{
+    font-style:italic;
+    font-size:15px;
+    margin-left:40px;
+    line-height:0px;
+    
+
+}
+.section2{
+    margin-left:700px;
+
+}
+.button {
+    background-color:blue;
+    border: none;
+    color: white;
+    padding: 9px 15px;
+    text-align: center;
+    display: inline-block;
+    font-size: 12px;
+    margin-left:700px;
+}
+.section3{
+    margin-left:300px;
+}
+
+</style>
+
+<body>
+   <script>
+    function validateForm(){
+    var fname=document.getElementById("Firstname");
+    var lname=document.getElementById("Lastname");
+    var phno=document.getElementById("Mobileno");
+    var password=document.getElementById("pwd");
+    var verify=document.getElementById("verify");
+    if(phno.value==""){
+        alert("Phone number must be filled out");
+        return false;
+    }
+    if (password.value == "") {
+        alert("Password must not be blank");
+        return false;
+    }
+
+    if(phno.value!==""){
+        if(phno.value.length==10){
+            
+        }
+        
+   else{
+          alert("Phone number must contain 10 digits");
+          return false;
+   }
+    }
+
+    if(password.value!= "" && password.value == verify.value) {
+      if(password.value.length < 6) {
+        alert("Error: Password must contain at least six characters!");
+        return false;
+      }
+     var digits = /[0-9]/g;
+     var lowercase = /[a-z]/g;
+     var uppercase = /[A-Z]/g;
+      if(password.value.match(digits) && password.value.match(uppercase) && password.value.match(lowercase)) {
+         
+          
+      }
+      else
+     {
+        alert("Error: password must contain at least one number (0-9),one lowercase letter (a-z),one uppercase letter(A-Z).");
+        return false;
+     }
+
+    } else {
+      alert("Error: Please check that you've entered and confirmed your password!");
+      return false;
+    }
+return true;
+  }
+</script>
+
+<section id="section1">
+
+    <h1 style="color:white;margin-bottom:0;">InstaPark
+
+    <br>
+
+       <p class="italic" style="margin-top:0;">A smart parking solution</p>
+       </h1>
+</section>
+<br><br><br><br><br><br><br>
+<p class=section2>SignUp</p>
+<form name="myform" action="https://crimson-sripriya94.c9users.io/hackathon/login.html" onsubmit="return validateForm()">
+<input type="text" id="Firstname" class="section2" placeholder="First Name" required>
+&nbsp;<input type="text" id="Lastname" placeholder="Last Name" required><br><br>
+<input type="text" id="Mobileno" class="section2" placeholder="Phone Number" required><br><br>
+<input type="text" id="pwd" class="section2" placeholder="Password" required><br><br>
+<input type="text" id="verify" class="section2" placeholder="Verify Password" required><br><br>
+<input type="submit" value="Create Account" class=button>
+</form>
+
+
+</body>
+</html>

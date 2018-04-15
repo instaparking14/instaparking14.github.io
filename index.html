@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+h2 {
+    color: white;
+}
+#section1{
+    background-color:black;
+    height:10%;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+
+}
+p.italic{
+    font-style:italic;
+    font-size:15px;
+    margin-left:40px;
+    line-height:0px;
+    
+
+}
+p.style{
+    font-style:normal;
+    font-size:25px;
+    margin-left:800px;
+    color: white;
+    
+
+}
+a.visited{
+    color:white;
+    font-size: 12px;
+    margin-left:1050px;
+}
+.button {
+    background-color:blue;
+    border: none;
+    color: white;
+    padding: 9px 15px;
+    text-align: center;
+    display: inline-block;
+    font-size: 12px;
+    margin-left:800px;
+}
+
+p.right{
+     font-style:italic;
+    font-size:15px;
+    margin-right:40px;
+    line-height:0px;
+   
+}
+
+body {
+    /*background-color: #E0FFFF;*/
+    /*background-image: url(http://hdfreewallpaper.net/wp-content/uploads/2015/07/2015-Volvo-XC90-parking.jpg)*/
+    background-image: url(https://www.walldevil.com/wallpapers/w02/794180-bokeh-cars-cityscapes-range-rover-streets.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: contain;
+    
+}
+
+</style>
+</head>
+<body>
+    <script>
+    function validateForm(){
+    var phno=document.getElementById("Mobileno");
+    var password=document.getElementById("pwd");
+    if(phno.value==""){
+        alert("Phone number must be filled out");
+        return false;
+    }
+    if (password.value == "") {
+        alert("Password must not be blank");
+        return false;
+    }
+
+    if(phno.value!==""){
+        if(phno.value.length==10){
+            
+        }
+        
+   else{
+          alert("Phone number must contain 10 digits");
+          return false;
+   }
+    }
+
+    if(password.value!= "") {
+      if(password.value.length < 6) {
+        alert("Error: Password must contain at least six characters!");
+        return false;
+      }
+     var digits = /[0-9]/g;
+     var lowercase = /[a-z]/g;
+     var uppercase = /[A-Z]/g;
+      if(password.value.match(digits) && password.value.match(uppercase) && password.value.match(lowercase)) {
+         
+          
+      }
+      else
+     {
+        alert("Error: password must contain at least one number (0-9),one lowercase letter (a-z),one uppercase letter(A-Z).");
+        return false;
+     }
+
+    } else {
+      alert("Error: Please check that you've entered and confirmed your password!");
+      return false;
+    }
+return true;
+  }
+    </script>
+<section id="section1">
+
+    <h1 style="color:white;margin-bottom:0;">InstaPark
+
+    <br>
+
+       <p class="italic" style="margin-top:0;">A smart parking solution
+       <a href="https://crimson-sripriya94.c9users.io/hackathon/signup.html" class="visited">New User? Register</a></p>
+       </h1>
+    </section1>
+    <br><br>
+<p class="style">SignIn</font></p>
+<form action="https://crimson-sripriya94.c9users.io/hackathon/selectcity.html" onsubmit="return validateForm()">
+   <p class="style"> <input type="text" name="mobileno." id="Mobileno" placeholder="Phone Number" required></p>
+    <p class="style"><input type="password" name="password" id="pwd" placeholder="Password" required></p>
+    <input type="submit" value=Login class=button>
+    </form>
+<h2 class="right"> Using InstaPark you can
+<ul>
+    <li>Find a parking spot quickly</li>
+    <li>Save fuel by not searching where to park in the parking lot</li>
+    <li>Save your time</li>
+    <li>Prevent global warming</li>
+</ul>
+</h2>
+
+</body>
+</html>

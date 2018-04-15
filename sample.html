@@ -1,10 +1,86 @@
 <!DOCTYPE html>
 <html>
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 300px;
+}
+th.style{
+    font-size:30px;
+}
+td.style{
+    font-size:30px;
+}
+#section1{
+    background-color:black;
+    height:10%;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+
+}
+p.italic{
+    font-style:italic;
+    font-size:20px;
+    margin-left:40px;
+    line-height:0px;
+    
+
+}
+
+</style>
+</head>
 <body>
 
-<h2>HTML Image</h2>
-<img src="../hackathon/Parking-Lot.jpg" width="100" height="80" alt="My Pic">
+
+<table style="width:100%">
+  <tr>
+    <th id="r1" class="style">yes</th>
+    <th id="r2" class="style">yes</th> 
+    <th id="r3" class="style">no</th>
+  </tr>
+  <tr>
+    <th id="r4" class="style">yes</td>
+    <th id="r5" class="style">no</td>
+    <th id="r6" class="style">yes</td>
+  </tr>
+</table>
 
 
+    <!--Contents of the webpage-->
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <!-- <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyBo5M0vUbOPWbzGMXsP4UXTKtMMzTz0hkk",
+          authDomain: "crimsonhacks-d61d8.firebaseapp.com",
+          databaseURL: "https://crimsonhacks-d61d8.firebaseio.com",
+          storageBucket: "crimsonhacks-d61d8.appspot.com",
+        };
+        firebase.initializeApp(config);
+      </script>
+    <script>var firebaseRef = firebase.database().ref();
+        firebaseRef.child("Text").set("Some Valu2884");</script> -->
+            <section id="section1">
+
+            <h1 style="color:white;margin-bottom:0;">InstaPark
+
+               <br>
+
+            <p class="italic" style="margin-top:0;">A smart parking solution
+            </p>
+           </h1>
+        </section1>
+         </script>   
+         <script src="index.js">
+
+         </script>
 </body>
 </html>
